@@ -1,22 +1,23 @@
-package com.example.myapplication;
+package screen2;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplication.R;
+
 import java.util.ArrayList;
 
-public class Adapter extends BaseAdapter {
+public class Adapter2 extends BaseAdapter {
     private Context ctx;
     private int layoutItem;
-    private ArrayList<Contact> arrayList;
+    private ArrayList<Place> arrayList;
 
-    public Adapter(Context ctx, int layoutItem, ArrayList<Contact> arrayList) {
+    public Adapter2(Context ctx, int layoutItem, ArrayList<Place> arrayList) {
         this.ctx = ctx;
         this.layoutItem = layoutItem;
         this.arrayList = arrayList;
@@ -40,9 +41,9 @@ public class Adapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = LayoutInflater.from(ctx).inflate(layoutItem, viewGroup, false);
         //Anh xa
-        TextView tvName = (TextView) view.findViewById(R.id.textView);
+        TextView tvName = (TextView) view.findViewById(R.id.textView2);
         //
-        tvName.setText(arrayList.get(i).getName());
+        tvName.setText(arrayList.get(i).getID()+"."+arrayList.get(i).getName());
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

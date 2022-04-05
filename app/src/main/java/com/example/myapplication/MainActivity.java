@@ -12,6 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import screen1.DatabaseHandler;
+import screen1.Adapter;
+import screen1.Contact;
+
 public class MainActivity extends AppCompatActivity {
     ListView lv;
     Adapter adt;

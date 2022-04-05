@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package screen1;
 
 public class Contact {
     int _id;
